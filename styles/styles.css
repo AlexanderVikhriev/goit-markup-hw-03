@@ -4,10 +4,6 @@
 /* цвет фона вторичный #F5F4FA */
 /* цвет фона #FFFFFF */
 /* цвет фона герой #2F303A */
-html {box-sizing: border-box;}
-*,
-*::before,
-*::after {box-sizing: inherit;}
 
 
 body {
@@ -21,11 +17,11 @@ margin-right: 0px;
 margin-left: 0px;
 }
 
-.list,
+.list-do,
 .footer-list,
 .advantages-list,
 .list-team,
-.listbuttons,
+.list-buttons,
 .navigation,
 .authorisation {
     list-style: none;
@@ -33,29 +29,36 @@ margin-left: 0px;
     padding: 0px;
 }
 
-.containerhead {
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+.container {
     margin-left: auto;
     margin-right: auto;
-    width: 1170px;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-bottom: 0px;
+    margin-top: 0px;}
+
+.display {
     display: flex;
     align-items: center;
 }
 
-.containerbottom {
+.bottom {
     width: auto;
     border-bottom: 1px solid #ECECEC;
-}
-.containerhead-footer {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1170px;
-    margin-bottom: 0px;
 }
 
 .navigation {
     display: flex;
 }
+
 
 .authorisation {
     display: flex;
@@ -76,7 +79,8 @@ margin-left: 0px;
      font-weight: 700;
      font-size: 26px;
      line-height: 1.2;
-     letter-spacing: 0.03em;}  
+     letter-spacing: 0.03em;
+     margin-right: 93px;}  
 
 
 .logopart {color: #000000;
@@ -86,7 +90,6 @@ margin-left: 0px;
      font-size: 26px;
      line-height: 1.2;
      letter-spacing: 0.03em;
-     margin-right: 93px;
     }
 
 .navigation a {color: #212121;
@@ -116,20 +119,22 @@ margin-left: 0px;
 .hero {
     background-color: #2F303A;
     text-align: center;
-    margin-bottom: 94px;
-    }
-.heroname{
-    margin-top: 0px;
-    margin-bottom: 30px;
     padding-top: 200px;
+    padding-bottom: 200px;
+    }
+.hero-name{;
     color: #fff;
     font-weight: 900;
-        font-size: 44px;
-        line-height: 1.5;
-        text-align: center;
-        letter-spacing: 0.06em;}
+    font-size: 44px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 30px}
+       
 
-.herobutton {
+.hero-button {
 font-family: "Roboto";
 color: #fff;
 background-color: #2196F3;
@@ -142,48 +147,52 @@ border-radius: 4px;
 padding: 10px 32px;
 border: 1px transparent;
 min-width: 198px;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-margin-bottom: 200px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
 }
 
 
 .section-title {
-    color: #212121;
+        color: #212121;
         font-weight: 700;
         font-size: 36px;
         line-height: 1.2;
         letter-spacing: 0.03em;
-        margin-top: 0px;
-        margin-bottom: 50px;
         text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 50px;
 }
 
 .section {
-    margin-left: auto;
-        margin-right: auto;
-        width: 1170px;
-        margin-bottom: 94px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .advantages-list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 94px;
+    margin-left: -30px;
 }
 
-.advantage {
-    width: 270px;
+.advantages-list >.advantage {
+   flex-basis: calc(100%/4 - 30px); 
+   margin-left: 30px;
 }
 
 
 .list-team {
     display: flex;
     justify-content: space-between;
+    text-align: center;
 }
 
-.section p {
-    margin-top: 0px;
-    margin-bottom: 0px ;
+.team-mem {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4)
 }
+
 
 .title {
     color: #212121;
@@ -192,34 +201,35 @@ margin-bottom: 200px;
         line-height: 1.2;
         letter-spacing: 0.03em;
         text-transform: uppercase;
-        margin-top: 0px;
-        margin-bottom: 10px;
+        padding-top: 0px;
+        padding-bottom: 10px;
+        margin: 0px 0px ;
 }
+
 
 p {
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em}
 
-.team {background-color: #F5F4FA;
-padding-top: 94px;
-padding-bottom: 94px;
-margin-left: auto;
-margin-right: auto;
+
+.activity {
+    padding-right: 30px;
 }
 
-.list-team {
-    width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
+.activity:nth-child(3n) {
+    padding-right: 0px;
+}
+
+.team {background-color: #F5F4FA;
 }
 
 .name {
     color: #212121;
     font-weight: 500;
-        font-size: 16px;
-        line-height: 1.2;
-        letter-spacing: 0.03em
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em
 }
 
 .footer {background-color: #2F303A;
@@ -247,12 +257,17 @@ padding-bottom: 60px;
     line-height: 1.7;
     letter-spacing: 0.03em}
 
+.footer-list a:hover,
+.footer-list a:focus {
+    color: #2196F3;
+}
+
 /* дополнительно для портфолио */
-.listbuttons .namebutton:not(:last-child) {
+.list-buttons .name-button:not(:last-child) {
     margin-right: 8px;
 }
 
-.buttonlist {
+.button-list {
     font-family: "Roboto";
     color: #212121;
     background-color: #F5F4FA;
@@ -268,8 +283,8 @@ padding-bottom: 60px;
     padding-left: 22px;
     padding-right: 22px;
 }
-.buttonlist:hover,
-.buttonlist:focus {
+.button-list:hover,
+.button-list:focus {
     color: #fff;
     background-color: #2196F3;
 }
@@ -285,59 +300,49 @@ font-weight: 700;
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.03em;
-    margin-left: 24px;
-    margin-bottom: 20px;
-    margin-top: 0px;
 }
 
-.portfolio-list {
-    margin-top: 94px;
-    margin-bottom: 94px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1170px;
-}
 
-.listbuttons {
-    margin-bottom: 50px;
+.list-buttons {
+    padding-bottom: 50px;
     display: flex;
     justify-content: center;
 }
 
-.list {
+.list-do {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -30px;
 }
 
-.element {
-    width: 370px;
-    margin-right: 30px;
-    margin-bottom: 30px;
+.list-do > .element{
+    flex-basis: calc(100%/3 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
 }
-.element:nth-child(3n) {
-    margin-right: 0px;
-}
-.element:nth-last-child(-n+3) {
-    margin-bottom: 0px ;
-}
+
 
 .point-el {
-    padding-left: 24px;
-    padding-top: 20px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 4px;
+    margin-bottom: 4px;
     color: #212121;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
-    letter-spacing: 0.06em
+    letter-spacing: 0.06em;
 }
 
-.border-el {
-    width: 370px;
-    height: 110px;
+.el-text {
+    padding: 20px 24px;
     border-bottom: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
 }
+
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
