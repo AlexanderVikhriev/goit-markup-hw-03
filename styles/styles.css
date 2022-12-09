@@ -18,6 +18,7 @@ margin-left: 0px;
 }
 
 .list-do,
+.list-activity,
 .footer-list,
 .advantages-list,
 .list-team,
@@ -32,9 +33,12 @@ margin-left: 0px;
 h1,
 h2,
 h3,
-p {
+p,
+ul {
     margin: 0;
+    padding: 0px;
 }
+
 
 .container {
     margin-left: auto;
@@ -45,9 +49,16 @@ p {
     margin-bottom: 0px;
     margin-top: 0px;}
 
-.display {
+.container-display {
     display: flex;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .bottom {
@@ -129,9 +140,7 @@ p {
     line-height: 1.5;
     text-align: center;
     letter-spacing: 0.06em;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 30px}
+    margin-bottom: 30px;}
        
 
 .hero-button {
@@ -158,8 +167,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
         line-height: 1.2;
         letter-spacing: 0.03em;
         text-align: center;
-        margin-top: 0px;
-        margin-bottom: 0px;
         padding-bottom: 50px;
 }
 
@@ -167,11 +174,13 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
     padding-top: 94px;
     padding-bottom: 94px;
 }
+.section-do {
+    padding-bottom: 94px;
+}
 
 .advantages-list {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 94px;
     margin-left: -30px;
 }
 
@@ -201,9 +210,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
         line-height: 1.2;
         letter-spacing: 0.03em;
         text-transform: uppercase;
-        padding-top: 0px;
         padding-bottom: 10px;
-        margin: 0px 0px ;
 }
 
 
@@ -212,16 +219,24 @@ p {
     line-height: 1.7;
     letter-spacing: 0.03em}
 
+.list-activity {
+    display: flex;
+    flex-wrap: wrap;}
 
 .activity {
-    padding-right: 30px;
+    margin-right: 30px;
 }
 
 .activity:nth-child(3n) {
-    padding-right: 0px;
+    margin-right: 0px;
 }
 
 .team {background-color: #F5F4FA;
+}
+
+.team-text {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .name {
@@ -250,7 +265,8 @@ padding-bottom: 60px;
     font-style: normal;
     font-size: 14px;
     line-height: 1.7;
-    letter-spacing: 0.03em;}
+    letter-spacing: 0.03em;
+     margin-bottom: 9px;}
 .footer-list a {color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     font-size: 14px;
@@ -261,6 +277,11 @@ padding-bottom: 60px;
 .footer-list a:focus {
     color: #2196F3;
 }
+
+.mail {
+    margin-bottom: 9px;
+}
+
 
 /* дополнительно для портфолио */
 .list-buttons .name-button:not(:last-child) {
@@ -287,6 +308,7 @@ padding-bottom: 60px;
 .button-list:focus {
     color: #fff;
     background-color: #2196F3;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4)
 }
 
 
@@ -304,7 +326,7 @@ font-weight: 700;
 
 
 .list-buttons {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
 }
@@ -313,6 +335,7 @@ font-weight: 700;
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
+    margin-top: -30px;
 }
 
 .list-do > .element{
